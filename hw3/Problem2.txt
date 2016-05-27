@@ -1,0 +1,34 @@
+Problem 2
+Part (A):
+   Answer: To obtain the worst-case runtime for somefunc, let's assume 
+           bar() is called most of the time. Which lead to O(n^2)
+   
+Part (B):
+   Answer: It will go to bar() once after reaching foo() (n/2 - 1) times. 
+           So, ((n/2) * log n + 1 * n^2) / (n/2)
+           = 2 (n(1/2 logn +n))/n
+           = 2 (1/2 logn + n)
+      
+           which is Θ(n)
+   
+Part (C):
+   Answer: It will go to bar() once after reaching foo() (n/2 - 1) times.
+           So, 
+           ((n/2) * nlogn + 1 * n^2) / (n/2) 
+           = 2 ((n^2logn + n^2)/n)
+           = 2 (nlogn +1)
+  
+           which is Θ(nlogn)
+  
+Part D:
+   Answer: Worst case is O(n^2) because the worst case is
+           that bar() will be called most of the time in both functions. 
+           
+           Amortized run time is 
+           [((n/2) * logn) + ((n/2) * n^2) + (1 * n^2) + (1 * logn)] / (n/2)
+           = 2 [(1/2 nlogn) + (1/2 n^3) + n^2 + logn] / n
+           = logn + n^2 + 2n + logn/n
+           
+           which is Θ(n^2)
+           
+           
