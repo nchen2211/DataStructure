@@ -1,0 +1,30 @@
+Problem 1
+Part (a)
+   1. Looking up information relevant to the course online.
+   4. Asking the course staff for help.
+
+Part (b)
+    1. gedit
+    2. emacs
+    3. sublime
+          
+Part (c): 
+   1. Each student has 3 late days of which only 1 can be used per HW.
+
+Part (d): 
+   2. Complete the online late submission form.
+
+
+Problem 2
+Part (a)
+   3. Terminal (Mac or Linux)
+
+Part (b)
+   1. Stage an untracked file to be committed. The file is called 'hw1q2b.cpp'.
+   Answer: git add hw1q2b.cpp 
+   2. Display the details of the last three commits in the repository.
+   Answer: git log
+   
+Part (c)
+   It will not properly commit the staged file. It will prompt the user to type in a commit message.
+         
