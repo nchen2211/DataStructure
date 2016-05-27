@@ -1,0 +1,128 @@
+Problem 1
+Part (a):
+   The status of README.md is unmodified
+   
+Part (b):
+   The status of README.md is modified
+   The status of fun_problem.txt is untracked
+   
+Part (c):
+   The status of README.md is staged
+   The status of fun_problem.txt is staged
+   
+Part (d):
+   The status of README.md is modified
+   The status of fun_problem.txt is modified
+   
+Part (e):
+   The status of README.md is staged
+   The status of fun_problem.txt is modified
+   The content of fun_problem.txt is blank because we executed git checkout
+   which will discard changes in working directory)
+   
+Part (f):
+   The status of README.md is staged and modified because we staged README.md file
+   then edited it 
+   
+   
+Problem 3
+Part (a)
+Answer: Θ(n log n)
+Explanation:
+   The if statement determines the occurence of the inner for loop. Taking
+   a condition when all the element of array A is all 0, then:
+   log n - the inner for loop j increases twice of its current value.
+   n - the outer for loop  it runs n times
+   
+   So the expression = n log n, which is Θ(n log n)
+  
+   
+Part (b)
+Answer: Θ(n^2)
+Explanation:
+   log n - the if statement is only happening j/i times. Any int over i is a 
+   harmonic series.
+   log n - the third inner for loop because k increases twice of its current value.
+   n - the second inner for loop j runs n times.
+   n - the outmost for loop i runs i times.
+   
+   So the expression = n^2 + n(log n)^2, which is Θ(n^2)
+   
+Part (c)
+Answer: Θ(n^2)
+Explanation:
+   n - the inner for loop doubles the size of array a 10 times bigger than
+   its previous size. It happens only n/10 times, which can be factored out 
+   as 1/10 * n.
+   n - the outer for loop runs n times
+   
+   So the expression = n^2, which is Θ(n^2)
+
+
+Part (d)
+Answer: Θ(n)
+Explanation:
+   Most of the insertion its runtime is constant. However, the array will 
+   double the size only when 10x elements filled the array. Basically,
+   the runtime is constant, but its growth rate significantly increases
+   on certain times. Therefore, they seem to "even out" the growth rate.
+   
+   So the expression = ∑2i, which simplified to n!, which is Θ(n)
+   
+
+Problem 4
+   1. Data type needed: List
+      Set type: A list of vector of the U.S presidents (string). 
+      Explanation: 
+         A string of vector is chosen for storing the president's names
+         and the vector index indicates the order in which they served.
+         List cares about order, so it is the appropriate data type
+         for storing the president's names in order. We use vector so we
+         don't need to determine the size of the storage initally since there
+         will be a new president serving after 4 or 8 years.
+         
+   2. Data type needed: Map
+      Map type: A map of struct consisting of zip code 
+      and the population of that zip code.
+      Explanation:
+         A Map of struct is chosen for this case because we can determine
+         the zip code as a key, which will allow the user to speedy access the 
+         population corresponding with the given zip code.
+         
+   3. Data type needed: Set
+      Set type: A set of string of student ID that represent the students
+      who solved a tricky problem in CSCI 170
+      Explanation: 
+         A set of string is chosen because the data storage will highly
+         likely being used for grading (accessing), delete mistakenly entered
+         student (remove), and knowing the number of students
+         who solved the problem (size of the set).
+         
+   4. Data type needed: Map
+      Map type: A map of struct consisting student ID, assignment number, and
+      numeric grade.
+      Explanation:
+         A map of struct is chosen for this case because it allows the user
+         to access a student's grade for a particular assignment easily by
+         entering the keys (student ID and assignment number).
+    
+   
+Problem 5
+   Answer: It returns 5 4 3 2 1
+   Explanation:
+      Let's assume we have a singly linked list(LL) 1 -> 2 -> 3 -> 4 -> 5.
+
+      funcA is to determine whether the node of LL points to an element. The last
+      element that points to another element is 4. This element, 4, is passed as
+      the first parameter (in1) in funcB, and the element that 4 is pointing
+      to, which is 5, is passed as the second parameter (in2) in funcB.
+
+      We enter funcB, since (5) does not point to any element, it skips the condition
+      and is assigned (4) as its next element. 
+
+      We enter funcA, it 4->next to NULL, and funcA returns 5. Recursion starts and
+      it does the same process of seeking which last element of the list that does
+      not point to any element. After outputting 5, it outputs 4, then 3, 2, 1.
+      It stops after noticing that 1 does not point to any element.
+
+         
